@@ -5,19 +5,7 @@ import gameVideo from '../assets/gameVideo.mp4';
 import { useState } from 'react';
 import StartScreen from './StartScreen';
 import GameScreen from './GameScreen';
-
-const HASH = 'e751efb8b652817fa0c47700ad07167bf7140bb7f137fdfae9ccf233baa4e69c';
-
-async function verifyPassword(inputPassword: string) {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(inputPassword);
-  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-  const hash = Array.from(new Uint8Array(hashBuffer))
-    .map((b) => b.toString(16).padStart(2, '0'))
-    .join('');
-
-  return hash === HASH;
-}
+import { verifyPassword } from '../utils/passCheck';
 
 const Main = () => {
   const [gameIsOn, setGameIsOn] = useState(false);
