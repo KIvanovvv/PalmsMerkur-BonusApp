@@ -32,7 +32,6 @@ const Main = () => {
 
   const handleSwitchScreen = (value: boolean) => {
     if (!gameIsOn && !value) {
-      console.log("Can't go back to start screen from game screen");
       setOpenResetModal(true);
       return;
     }
