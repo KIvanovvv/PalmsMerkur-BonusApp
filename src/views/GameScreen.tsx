@@ -24,8 +24,8 @@ import card9B from '../assets/card9-b-min.webp';
 
 import bloodStain from '../assets/bloodStain.png';
 import bonus from '../assets/bonus.png';
-import twentyForty from '../assets/20-40.png';
-import fiftyHundred from '../assets/50-100.png';
+import tenTwenty from '../assets/10-20.png';
+import thirtySixty from '../assets/30-60.png';
 import youWin from '../assets/youWin.png';
 import redMist from '../assets/redMist.mp4';
 
@@ -39,15 +39,15 @@ type CardsType = {
 };
 
 const CARDS: CardsType[] = [
-  { id: 'card-0-0', imageA: card1A, imageB: card1B, bonusImg: twentyForty },
-  { id: 'card-0-1', imageA: card2A, imageB: card2B, bonusImg: twentyForty },
-  { id: 'card-0-2', imageA: card3A, imageB: card3B, bonusImg: fiftyHundred },
-  { id: 'card-1-0', imageA: card4A, imageB: card4B, bonusImg: fiftyHundred },
-  { id: 'card-1-1', imageA: card5A, imageB: card5B, bonusImg: fiftyHundred },
-  { id: 'card-1-2', imageA: card6A, imageB: card6B, bonusImg: fiftyHundred },
-  { id: 'card-2-0', imageA: card7A, imageB: card7B, bonusImg: twentyForty },
-  { id: 'card-2-1', imageA: card8A, imageB: card8B, bonusImg: twentyForty },
-  { id: 'card-2-2', imageA: card9A, imageB: card9B, bonusImg: twentyForty },
+  { id: 'card-0-0', imageA: card1A, imageB: card1B, bonusImg: tenTwenty },
+  { id: 'card-0-1', imageA: card2A, imageB: card2B, bonusImg: tenTwenty },
+  { id: 'card-0-2', imageA: card3A, imageB: card3B, bonusImg: thirtySixty },
+  { id: 'card-1-0', imageA: card4A, imageB: card4B, bonusImg: thirtySixty },
+  { id: 'card-1-1', imageA: card5A, imageB: card5B, bonusImg: thirtySixty },
+  { id: 'card-1-2', imageA: card6A, imageB: card6B, bonusImg: thirtySixty },
+  { id: 'card-2-0', imageA: card7A, imageB: card7B, bonusImg: tenTwenty },
+  { id: 'card-2-1', imageA: card8A, imageB: card8B, bonusImg: tenTwenty },
+  { id: 'card-2-2', imageA: card9A, imageB: card9B, bonusImg: tenTwenty },
 ];
 
 const LOCAL_STORAGE_KEY = 'openedCards';
@@ -63,7 +63,7 @@ const shuffleArray = <T,>(array: T[]): T[] => {
 };
 
 const generateRandomBonusCards = (): CardsType[] => {
-  const bonusImages = [fiftyHundred, fiftyHundred, fiftyHundred, twentyForty, twentyForty, twentyForty, twentyForty, twentyForty, twentyForty];
+  const bonusImages = [thirtySixty, thirtySixty, thirtySixty, tenTwenty, tenTwenty, tenTwenty, tenTwenty, tenTwenty, tenTwenty];
 
   const shuffledBonuses = shuffleArray(bonusImages);
 
